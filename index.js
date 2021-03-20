@@ -1,3 +1,3 @@
-const provider = require("./todoProvider");
+const provider = require("./provider");
 
 module.exports = provider;
