@@ -1,14 +1,7 @@
 {
-  "configuration": {
-    "provider": "todo-provider",
-    "type": "resource",
-    "resource": "todo",
-    "payload": {
-      "id": 1
-    }
-  },
-  "checks": [
-    {
+  "todo-id-check": {
+    "hasError": false,
+    "check": {
       "id": "todo-id-check",
       "name": "check if todo has an id.",
       "severity": "High",
@@ -22,7 +15,12 @@
         { "path": "id", "condition": "equal", "value": 1 }
       ]
     },
-    {
+    "stepsResults": [true, true],
+    "inspectedValues": [1, 1]
+  },
+  "todo-userId-check": {
+    "hasError": false,
+    "check": {
       "id": "todo-userId-check",
       "name": "check if todo has a userId.",
       "severity": "High",
@@ -41,7 +39,12 @@
         }
       ]
     },
-    {
+    "stepsResults": [true, true],
+    "inspectedValues": [1, [1, 1]]
+  },
+  "todo-title-check": {
+    "hasError": false,
+    "check": {
       "id": "todo-title-check",
       "name": "check if todo has a title.",
       "severity": "Warning",
@@ -61,17 +64,20 @@
         }
       ]
     },
-    {
+    "stepsResults": [true, true],
+    "inspectedValues": ["delectus aut autem", "delectus aut autem"]
+  },
+  "todo-completed-check": {
+    "hasError": false,
+    "check": {
       "id": "todo-completed-check",
       "name": "check if todo has a valid completed field.",
       "severity": "Warning",
       "steps": [
-        {
-          "path": "completed",
-          "condition": "includes",
-          "value": [true, false]
-        }
+        { "path": "completed", "condition": "includes", "value": [true, false] }
       ]
-    }
-  ]
+    },
+    "stepsResults": [true],
+    "inspectedValues": [false]
+  }
 }
