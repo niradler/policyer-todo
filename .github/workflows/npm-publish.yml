@@ -14,6 +14,5 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-      - run: npm uninstall policyer
-      - run: npm install policyer
+      - run: npm run update
       - run: npm test
