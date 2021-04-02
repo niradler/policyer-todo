@@ -15,6 +15,6 @@ npm i
 see checks folder for check examples.
 to run the cli:
 
-```
+```sh
 node cli.js -o ./report.json -p ./checks -i false
 ```

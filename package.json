@@ -1,6 +1,6 @@
 {
   "name": "policyer-todo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provider example to check todo api with policyer.",
   "main": "index.js",
   "bin": {
