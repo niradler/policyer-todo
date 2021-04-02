@@ -11,12 +11,17 @@
     "update": "npm uninstall policyer && npm install policyer",
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": [
+    "policyer",
+    "example",
+    "check",
+    "todo"
+  ],
   "author": "Nir Adler",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.6.1",
-    "policyer": "0.0.14"
+    "policyer": "0.0.17"
   },
   "devDependencies": {
     "jest": "^26.6.3"

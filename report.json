@@ -1,83 +1,78 @@
-{
-  "todo-id-check": {
-    "hasError": false,
-    "check": {
-      "id": "todo-id-check",
-      "name": "check if todo has an id.",
-      "severity": "High",
-      "steps": [
-        {
-          "path": "id",
-          "condition": "equal",
-          "utility": "isInteger",
-          "value": true
-        },
-        { "path": "id", "condition": "equal", "value": 1 }
-      ]
+[
+  {
+    "configuration": {
+      "provider": "todo-provider",
+      "type": "resource",
+      "resource": "todo",
+      "payload": { "id": 1 }
     },
-    "stepsResults": [true, true],
-    "inspectedValues": [1, 1]
+    "report": {
+      "todo-id-check": {
+        "hasError": false,
+        "check": "check if todo has an id.",
+        "stepsResults": [true, true],
+        "inspectedValues": [1, 1],
+        "status": "success",
+        "severity": "High"
+      },
+      "todo-userId-check": {
+        "hasError": false,
+        "check": "check if todo has a userId.",
+        "stepsResults": [true, true],
+        "inspectedValues": [1, [1, 1]],
+        "status": "success",
+        "severity": "High"
+      },
+      "todo-title-check": {
+        "hasError": false,
+        "check": "check if todo has a title.",
+        "stepsResults": [true, true],
+        "inspectedValues": ["delectus aut autem", "delectus aut autem"],
+        "status": "success",
+        "severity": "Warning"
+      },
+      "todo-completed-check": {
+        "hasError": false,
+        "check": "check if todo has a valid completed field.",
+        "stepsResults": [true],
+        "inspectedValues": [false],
+        "status": "success",
+        "severity": "Warning"
+      }
+    }
   },
-  "todo-userId-check": {
-    "hasError": false,
-    "check": {
-      "id": "todo-userId-check",
-      "name": "check if todo has a userId.",
-      "severity": "High",
-      "steps": [
-        {
-          "path": "userId",
-          "condition": "equal",
-          "utility": "isInteger",
-          "value": true
-        },
-        {
-          "or": [
-            { "path": "userId", "condition": "equal", "value": 1 },
-            { "path": "userId", "condition": "equal", "value": "1" }
-          ]
-        }
-      ]
+  {
+    "configuration": {
+      "provider": "todo-provider",
+      "type": "resource",
+      "resource": "todo",
+      "payload": { "id": 1 }
     },
-    "stepsResults": [true, true],
-    "inspectedValues": [1, [1, 1]]
-  },
-  "todo-title-check": {
-    "hasError": false,
-    "check": {
-      "id": "todo-title-check",
-      "name": "check if todo has a title.",
-      "severity": "Warning",
-      "steps": [
-        {
-          "path": "title",
-          "condition": "not",
-          "utility": "isEmpty",
-          "value": true
-        },
-        {
-          "path": "title",
-          "condition": "gt",
-          "utility": "get",
-          "utilityProps": ["length"],
-          "value": 3
-        }
-      ]
-    },
-    "stepsResults": [true, true],
-    "inspectedValues": ["delectus aut autem", "delectus aut autem"]
-  },
-  "todo-completed-check": {
-    "hasError": false,
-    "check": {
-      "id": "todo-completed-check",
-      "name": "check if todo has a valid completed field.",
-      "severity": "Warning",
-      "steps": [
-        { "path": "completed", "condition": "includes", "value": [true, false] }
-      ]
-    },
-    "stepsResults": [true],
-    "inspectedValues": [false]
+    "report": {
+      "todo-id-check": {
+        "hasError": false,
+        "check": "check if todo has an id.",
+        "stepsResults": [true, true],
+        "inspectedValues": [1, 1],
+        "status": "success",
+        "severity": "High"
+      },
+      "todo-title-check": {
+        "hasError": false,
+        "check": "check if todo has a title.",
+        "stepsResults": [true],
+        "inspectedValues": ["delectus aut autem"],
+        "status": "success",
+        "severity": "Warning"
+      },
+      "todo-completed-check": {
+        "hasError": false,
+        "check": "check if todo has a valid completed field.",
+        "stepsResults": [true],
+        "inspectedValues": [false],
+        "status": "success",
+        "severity": "Warning"
+      }
+    }
   }
-}
+]

@@ -4,7 +4,7 @@ const Provider = require(".");
 
 const cli = new Cli(Provider, { description: "Scan todo checks." });
 
-const cliReport = (report) => {
+const cliReport = ({ report }) => {
   for (const key in report) {
     if (Object.hasOwnProperty.call(report, key)) {
       const check = report[key];
