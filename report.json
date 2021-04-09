@@ -1,5 +1,6 @@
 [
   {
+    "file": "todoCheck.json",
     "configuration": {
       "provider": "todo-provider",
       "type": "resource",
@@ -42,6 +43,7 @@
     }
   },
   {
+    "file": "todoCheck.yml",
     "configuration": {
       "provider": "todo-provider",
       "type": "resource",

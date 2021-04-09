@@ -1,6 +1,6 @@
 {
   "name": "policyer-todo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provider example to check todo api with policyer.",
   "main": "index.js",
   "bin": {
@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.6.1",
-    "policyer": "0.0.17"
+    "policyer": "0.0.26"
   },
   "devDependencies": {
     "jest": "^26.6.3"
