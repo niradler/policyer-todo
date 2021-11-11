@@ -16,7 +16,7 @@ checks:
         value: true
       - path: id
         condition: equal
-        value: 2
+        value: 1
   - id: todo-title-check
     name: check if todo has a title.
     severity: Warning
