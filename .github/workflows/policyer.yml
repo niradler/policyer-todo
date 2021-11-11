@@ -12,5 +12,5 @@ jobs:
         with:
           verbose: true
           provider: policyer-todo
-          internal: false
+          internal: true
           checks_path: ./checks
