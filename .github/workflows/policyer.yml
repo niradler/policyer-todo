@@ -11,6 +11,6 @@ jobs:
         uses: policyerorg/policyer-action@v0.0.2-alpha
         with:
           verbose: true
-          provider: policyer-todo
+          provider: local
           internal: false
           checks_path: ./checks

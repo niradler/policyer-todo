@@ -7,7 +7,8 @@
     "policyer-todo": "cli.js"
   },
   "scripts": {
-    "start": "node cli.js ./checks -i false -v",
+    "dev": "node cli.js ./checks -i false -v",
+    "start": "node cli.js",
     "update": "npm uninstall policyer && npm install policyer",
     "test": "jest"
   },
